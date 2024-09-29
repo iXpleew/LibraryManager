@@ -6,8 +6,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class HelloApplication extends Application {
     @Override
@@ -15,7 +13,7 @@ public class HelloApplication extends Application {
         FXMLLoader mainMenu = new FXMLLoader(HelloApplication.class.getResource("template.fxml"));
         Scene scene = new Scene(mainMenu.load());
 
-        stage.setTitle("LibraryManager");
+        stage.setTitle("Library Manager");
         stage.setScene(scene);
         stage.show();
 

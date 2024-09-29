@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 public class HelloController {
     private Stage stage;
     FXMLLoader registerUserFXMl = new FXMLLoader(HelloController.class.getResource("register-user.fxml"));
-
+    FXMLLoader mainMenuFXML = new FXMLLoader(HelloController.class.getResource("template.fxml"));
     public void setStage(Stage stage){
         this.stage = stage;
     }
@@ -24,6 +24,17 @@ public class HelloController {
             HelloApplication.startStage(stage, registerUserFXMl, "Register user");
         } else {
             System.err.println("Stage is not properly initialized");
+        }
+    }
+
+
+    @FXML
+    protected void onBackUserClick() throws IOException{
+        //tutaj trzebva ogrnac
+        if(stage != null && mainMenuFXML != null){
+            HelloApplication.startStage(stage, mainMenuFXML, "Library Manager");
+        } else {
+          System.err.println("Stage is not properly initialized");
         }
     }
     protected void updateTime() {
